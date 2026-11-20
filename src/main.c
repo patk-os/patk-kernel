@@ -8,9 +8,11 @@
  *   main:	    	MINIX main program
  *   prepare_shutdown:	prepare to take MINIX down
  */
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
+
+char *env_get(const char *name);
+void minix_shutdown(int how);
+
+#include "kernel.h"
 #include <minix/endpoint.h>
 #include <machine/vmparam.h>
 #include <minix/u64.h>

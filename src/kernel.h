@@ -23,6 +23,7 @@
 #ifndef __ASSEMBLY__
 
 /* The following are so basic, all the *.c files get them automatically. */
+#include <minix/patk_types.h>
 #include <minix/config.h>	/* global configuration, MUST be first */
 #include <sys/types.h>		/* general system types */
 #include <minix/const.h>	/* MINIX specific constants */
@@ -31,7 +32,6 @@
 #include <minix/sysutil.h>	/* MINIX utility library functions */
 #include <minix/timers.h>		/* watchdog timer management */
 #include <errno.h>		/* return codes and error numbers */
-#include <sys/param.h>
 #include <minix/param.h>
 
 /* Important kernel header files. */
@@ -49,7 +49,7 @@
 #ifndef CONFIG_SMP
 /* We only support 1 cpu now */
 #define CONFIG_MAX_CPUS	1
-#define cpuid		0
+
 /* this is always true on an uniprocessor */
 #define cpu_is_bsp(x) 1
 

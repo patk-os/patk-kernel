@@ -53,3 +53,11 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Editor and IDE Metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
